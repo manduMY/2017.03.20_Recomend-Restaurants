@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>숙박페이지</title>
+    <link rel="stylesheet" href="../css/inn.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+        <article class="traverse-bar">
+          <div class="pull-left">
+            <ul class="category">
+              <li><input id="all" type="radio" name="nav_group" value="all" /><label for="all">전체</label></li>
+              <li><input id="motel" type="radio" name="nav_group" value="motel" /><label for="motel">모텔</label></li>
+              <li><input id="hotel" type="radio" name="nav_group" value="hotel" /><label for="hotel">호텔</label></li>
+              <li><input id="guesthouse" type="radio" name="nav_group" value="guesthouse" /><label for="guesthouse">게스트하우스</label></li>
+            </ul>
+          </div>
+          <div class="pull-right">
+            <div class="search-bar">
+              <form>
+                <input type="text" class="input_search" />
+                <button type="button" class="input-search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </article>
+      <section>
+        <div class="contents-wrapper">
+          <br>
+          <div class="inn" id="inn1">
+            <div class="inn-image">
+              <a onclick="inn1_clicked()" href="./inn1-detail.html"><img src="../image/inn/inn1_호텔A314.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn1_clicked()" href="./inn1-detail.html"><h3 id="title_name1">호텔A314</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn1-type">호텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn1-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn1-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn1 -->
+
+          <br>
+          <div class="inn" id="inn2">
+            <div class="inn-image">
+              <a onclick="inn2_clicked()" href="./inn2-detail.html"><img src="../image/inn/inn2_시마모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn2_clicked()" href="./inn2-detail.html"><h3 id="title_name2">시마 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn2-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn2_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn2-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn2 -->
+
+          <br>
+          <div class="inn" id="inn3">
+            <div class="inn-image">
+              <a onclick="inn3_clicked()" href="./inn3-detail.html"><img src="../image/inn/inn3_테마모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn3_clicked()" href="./inn3-detail.html"><h3 id="title_name3">테마 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn3-type">야구사격</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn3_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn3-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn3-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn3 -->
+
+          <br>
+          <div class="inn" id="inn4">
+            <div class="inn-image">
+              <a onclick="inn4_clicked()" href="./inn4-detail.html"><img src="../image/inn/inn4_호텔스타.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn4_clicked()" href="./inn4-detail.html"><h3 id="title_name4">호텔스타</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn4-type">호텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn4-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn4-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn4 -->
+
+          <br>
+          <div class="inn" id="inn5">
+            <div class="inn-image">
+              <a onclick="inn5_clicked()" href="./inn5-detail.html"><img src="../image/inn/inn5_몰디브.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn5_clicked()" href="./inn5-detail.html"><h3 id="title_name5">몰디브</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn5-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn5-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn5-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn5 -->
+
+          <br>
+          <div class="inn" id="inn6">
+            <div class="inn-image">
+              <a onclick="inn6_clicked()" href="./inn6-detail.html"><img src="../image/inn/inn6_초원모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn6_clicked()" href="./inn6-detail.html"><h3 id="title_name6">초원 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn6-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn6-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn6-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn6 -->
+
+          <br>
+          <div class="inn" id="inn7">
+            <div class="inn-image">
+              <a onclick="inn7_clicked()" href="./inn7-detail.html"><img src="../image/inn/inn7_라베라모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn7_clicked()" href="./inn7-detail.html"><h3 id="title_name7">라베라 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn7-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn7-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn7-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn7 -->
+
+          <br>
+          <div class="inn" id="inn8">
+            <div class="inn-image">
+              <a onclick="inn8_clicked()" href="./inn8-detail.html"><img src="../image/inn/inn8_스카이모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn8_clicked()" href="./inn8-detail.html"><h3 id="title_name8">스카이 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn8-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn8_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn8-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn8-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn8 -->
+
+          <br>
+          <div class="inn" id="inn9">
+            <div class="inn-image">
+              <a onclick="inn9_clicked()" href="./inn9-detail.html"><img src="../image/inn/inn9_스타킹모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn9_clicked()" href="./inn9-detail.html"><h3 id="title_name9">스타킹 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn9-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn9-review">1</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn9-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn9 -->
+
+          <br>
+          <div class="inn" id="inn10">
+            <div class="inn-image">
+              <a onclick="inn10_clicked()" href="./inn10-detail.html"><img src="../image/inn/inn10_프리마모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn10_clicked()" href="./inn10-detail.html"><h3 id="title_name10">프리마 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn10-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn10_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn10-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn10-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn10 -->
+
+          <br>
+          <div class="inn" id="inn11">
+            <div class="inn-image">
+              <a onclick="inn11_clicked()" href="./inn11-detail.html"><img src="../image/inn/inn11_두바이모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn11_clicked()" href="./inn11-detail.html"><h3 id="title_name11">두바이 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn11-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn11-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn11-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn11 -->
+
+          <br>
+          <div class="inn" id="inn12">
+            <div class="inn-image">
+              <a onclick="inn12_clicked()" href="./inn12-detail.html"><img src="../image/inn/inn12_프린스모텔.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="inn-contents">
+              <div class="inn-title">
+                <a onclick="inn12_clicked()" href="./inn12-detail.html"><h3 id="title_name12">프린스 모텔</h3></a>
+              </div>
+              <div class="inn-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="inn12-type">모텔</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="inn12_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="inn12-review">2</span></p>
+              </div>
+              <div class="inn-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="inn12-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- inn12 -->
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2017. LaneLevine all right reserved.</p>
+    </footer>
+    <script type="text/javascript" src="../js/inn.js"></script>
+    <script type="text/javascript">
+      document.getElementById("inn1_view").innerHTML = localStorage.inn1_view;
+      document.getElementById("inn1-gpa").innerHTML = localStorage.inn1_gpa;
+      document.getElementById("inn2_view").innerHTML = localStorage.inn2_view;
+      document.getElementById("inn3_view").innerHTML = localStorage.inn3_view;
+      document.getElementById("inn4_view").innerHTML = localStorage.inn4_view;
+      document.getElementById("inn5_view").innerHTML = localStorage.inn5_view;
+      document.getElementById("inn6_view").innerHTML = localStorage.inn6_view;
+      document.getElementById("inn7_view").innerHTML = localStorage.inn7_view;
+      document.getElementById("inn8_view").innerHTML = localStorage.inn8_view;
+      document.getElementById("inn9_view").innerHTML = localStorage.inn9_view;
+      document.getElementById("inn10_view").innerHTML = localStorage.inn10_view;
+      document.getElementById("inn11_view").innerHTML = localStorage.inn11_view;
+      document.getElementById("inn12_view").innerHTML = localStorage.inn12_view;
+    </script>
+  </body>
+</html>

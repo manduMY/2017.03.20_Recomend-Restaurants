@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="play"></title>
+    <link rel="stylesheet" href="../css/play1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['영화이름',  '상영수'],
+          ['원더우먼', 0],
+          ['영화이름', 0]
+        ]);
+
+        var options = {
+          title: '영화별 상영수',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="play" id="play15">
+            <div class="play-image">
+              <a href="./play-detail.html"><img src="../image/play/play15_CGV.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a href="./play-detail.html"><h3>CGV</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play15-type">영화관</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play15_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play15-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play15-gpa">0.0</span>
+              </div>
+              <div class="play-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('010-7336-9724')"><img src="../image/play/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B033'10.9%22N+127%C2%B004'42.2%22E/@37.553025,127.0761933,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.553025!4d127.078382"><img src="../image/play/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/play/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./play15_reserve.html"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- play15 -->
+          <div class="explanation">
+            <p>소중한 순간을 담은 당신만의 티켓, 지금 愛티켓 하세요!</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 능동로 289 (군자동)</p>
+                <p>*&nbsp;영업시간: 월~금 am 10:00 ~ pm 10:30 주말 : 토~일 am 10:00 ~ pm 11:00 (공휴일 포함) </p>
+                <p>*&nbsp;전화번호: 1544-1122</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: O</p>
+                <p>*&nbsp;인근지하철: 군자역 7번출구 이용</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.555704, lng : 127.078398},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="play-review-001">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="#"><p>	inok****</p></a>
+                  <p class="review-text">여긴 주차하고 시설 빼면 괜찮.. 특히 주차는 최악</p>
+                </div>
+              </div><!-- play-review-001 -->
+              <div class="review-contents" id="play-review-002">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="#"><p>	mj00****</p></a>
+                  <p class="review-text">여기 진짜 음향이랑 화질 안 좋아요. 특히 음향. </p>
+                </div>
+              </div><!-- play-review-002 -->
+              <div class="review-contents" id="play-review-003">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="#"><p>sky2****</p></a>
+                  <p class="review-text">DVD방수준,어리버리직원들,키작은주차직원화냄 멱살잡이햇음 블박본사넘길꺼임 </p>
+                </div>
+              </div><!-- play-review-003 -->
+              <div class="review-contents" id="play-review-004">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="#"><p>	alsn****</p></a>
+                  <p class="review-text">자막 뜨자마자 불 켜는짓 좀 하지마세요 감동 다 깨지고 쿠키영상 못 보고</p>
+                </div>
+              </div><!-- play-review-004 -->
+            </div>
+          </div>
+		    </div>
+
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/play15-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play15_view").innerHTML = localStorage.play15_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

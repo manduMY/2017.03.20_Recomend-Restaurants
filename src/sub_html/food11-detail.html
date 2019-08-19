@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="food"></title>
+    <link rel="stylesheet" href="../css/food1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['뼈 없는 닭갈비',  8500],
+          ['닭순살볶음밥',  5000],
+          ['낙지볶음밥',  6000],
+          ['막국수',  5000],
+          ['대통주', 3000]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="food" id="food11">
+            <div class="food-image">
+              <a href="./food-detail.html"><img src="../image/food/food11_춘천골.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a href="./food-detail.html"><h3>춘천골</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food11-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food11-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="food11-gpa">0.0</span>
+              </div>
+              <div class="food-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-468-7396')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="#"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- food11 -->
+          <div class="explanation">
+            <p>#저렴한 가격으로 배부르게 먹을 수 있는 맛 집!</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울시 광진구 군자동361-29</p>
+                <p>*&nbsp;영업시간: 06:00 - 22:00</p>
+                <p>*&nbsp;전화번호: 02=468-7396</p>
+                <p>*&nbsp;휴무일: x</p>
+                <p>*&nbsp;주차시설: X</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.562943, lng: 127.079546},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="food-review-001">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-male.png" alt="" width="70px" />
+                </div>
+                  <div class="people-long">
+                    <a href="http://blog.naver.com/aldehyde7/220873907179"><p>[맛집] 가산 '춘천골'에서 토종닭으로 몸보신!</p></a>
+                    <p class="review-text">평일 어느날... 갑작스레 옆 파트에서 회식을 한다고 한다. 마침 야근도 해야해서 저녁도 먹어야 했고, 옆 파트 업무도 지원을 했던터라 그쪽 파트 선임님이 함께 가자고해서 이동했다. 회식장소는 회사 주변인...</p>
+                </div>
+              </div><!-- food-review-001 -->
+              <div class="review-contents" id="food-review-002">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/ha2684/220689057276"><p><가산동 옻닭 맛집 : 가산동 백숙 맛집 춘천골> 엄마랑 몸보신하러...</p></a>
+                  <p class="review-text">< 가산동 옻닭 : 가산동 백숙 맛집 춘천골 > -2016. 04. 20. 화요일-빡빡한 일본여행으로 지친심신을 달래고자 장어와 옻닭을 고민하던 중 어무니가 국물드시고 싶다해서 가산동 옻닭 먹으러 고우!!! 가산디지털단지 앞 골목에...</p>
+                </div>
+              </div><!-- food-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>뼈 없는 닭갈비</strong> : 8,500원</li>
+                  <li><strong>닭순살 볶음밥</strong> : 5,000원</li>
+                  <li><strong>낙지볶음밥</strong> : 6,000원</li>
+                  <li><strong>막국수</strong> : 5,000원</li>
+                  <li><strong>대통주</strong> : 3,000원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <p>모든것이 국내산</p>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <p>홀서빙 : 00명</p>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/food/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/food11-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("food11_view").innerHTML = localStorage.food11_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

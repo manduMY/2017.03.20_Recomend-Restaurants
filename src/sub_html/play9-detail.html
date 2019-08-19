@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="play"></title>
+    <link rel="stylesheet" href="../css/play1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="play" id="play9">
+            <div class="play-image">
+              <a href="./play-detail.html"><img src="../image/play/play9_PLAYONE.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a href="./play-detail.html"><h3>PLAYONE</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play9-type">오락실/멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play9-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play9-gpa">0.0</span>
+              </div>
+              <div class="play-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('010-6213-1471')"><img src="../image/play/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B032'33.7%22N+127%C2%B004'14.6%22E/@37.5426944,127.0685335,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.542692!4d127.070732"><img src="../image/play/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/play/star.png" alt="" width="50px" /></a><p>추천</p></li>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- play9 -->
+          <div class="explanation">
+            <p>#인형뽑기,다트,사격,야구,오락기,철권,코인노래방,두더지게임,레이싱게임 등 다양한 게임시설 완비. 다양한 이벤트진행중 핫플레이스!!!</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 화양동 11-3</p>
+                <p>*&nbsp;영업시간: 매일 11:00 ~ 03:00</p>
+                <p>*&nbsp;전화번호: 010-6213-1471</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: X</p>
+                <p>*&nbsp;인근지하철: 7호선 건대입구, 2호선 건대입구, 7호선 어린이대공원</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.542692, lng : 127.070732 },
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="play-review-001">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/bluebess11/220982120203"><p>건대 인형뽑기 잘뽑히는곳 플레이원 초파인형</p></a>
+                  <p class="review-text">건대 인형뽑기 잘뽑히는곳 플레이원 초파인형 안녕하세요 제이미쮸 입니다 >< 건대가면 밥 먹고 필수코스 건대 인형뽑기! 건대 인형뽑기 잘뽑히는곳 추천해드릴게요! 바로 건대 플레이원 입니당~.~ 저는 인형뽑기를 잘 하지는 못하는 편인데 여기보면 사람들이 인형들을 잔뜩 뽑아가더라구요...</p>
+                </div>
+              </div><!-- play-review-001 -->
+              <div class="review-contents" id="play-review-002">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/nb1043/220961521702"><p>건대 오락실 게임방 플레이원!! 뒤늦은 후기</p></a>
+                  <p class="review-text">건대 오락실 게임방 플레이원!! 뒤늦은 후기 안녕하세요 인형뽑기 블러거 피군이에요 :) 오늘은 매일매일 지나가고 매번 들리지만 귀차니즘에 미뤄뒀던 건대 오락실 게임방 플레이원 포스팅을 하려고 해요! 플레이원 서울특별시 광진구 아차산로33길 53 지도보기 현재는 위 사진과 다르게 입구에도...</p>
+                </div>
+              </div><!-- play-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/play/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/play1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play9_view").innerHTML = localStorage.play9_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

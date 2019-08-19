@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="play"></title>
+    <link rel="stylesheet" href="../css/play1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="play" id="play14">
+            <div class="play-image">
+              <a href="./play-detail.html"><img src="../image/play/play14_한아름 볼링장.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a href="./play-detail.html"><h3>한아름 볼링장</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play14-type">오락실/멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play14_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play14-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play14-gpa">0.0</span>
+              </div>
+              <div class="play-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-468-3025')"><img src="../image/play/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B032'36.5%22N+127%C2%B004'11.5%22E/@37.543482,127.0676743,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.543482!4d127.069863"><img src="../image/play/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/play/star.png" alt="" width="50px" /></a><p>추천</p></li>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- play14 -->
+          <div class="explanation">
+            <p>#저희 한아름 볼링장은 1995년 4월 15일 개장하였습니다. 넓은 실내와 쾌적한 공간
+으로 국내 최고의 수준이라고 자부하며, 저희 직원들은 친절과 서비스 정신으로 최상의 운동 여건을 제공하기위해 노력하고 있습니다. 또한 고객님들께서 다양한 성취감과 즐거움을 만끽 하실수 있도록 당구장, 탁구장, 오락장 등을 병행 운영하고 있습니다.
+</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 화양동 10-1</p>
+                <p>*&nbsp;영업시간: 매일 10:00 ~ 03:00</p>
+                <p>*&nbsp;전화번호: 02-468-3025</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: X</p>
+                <p>*&nbsp;인근지하철: 7호선 건대입구, 2호선 건대입구, 7호선 어린이대공원</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.543482, lng : 127.069863},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="play-review-001">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://m.post.naver.com/viewer/postView.nhn?volumeNo=7141952&memberNo=36213993&vType=VERTICAL"><p>건대볼링장 한아름 볼링장</p></a>
+                  <p class="review-text">안녕하세요 이제 진짜 봄입니다!!오늘 오랜만에 몸도 풀겸볼링을 치러 다녀왔습니다!! 한아름볼링장 서울특별시 광진구 능동로13길 39 한아름쇼핑센타 전화 상세보기 지도보기 자 요금은 앞의 x벤던를참고해주시기를 바랍니다사실 저도 볼링을 처음 처보는거라서가격설명을 정확히는 못해드릴듯.. 들어오시면 먼저 인포가보이실게에요항상 기다려야되고 번호적고 어디를다녀오는데 식사같은거는 하지마세요최소 2시간 기다린다하고 30분있다가우리 차례라고 하고 연락옴인포하시는분 성격이...</p>
+                </div>
+              </div><!-- play-review-001 -->
+              <div class="review-contents" id="play-review-002">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://cutehmy.blog.me/220978621879"><p>[일상포스팅] 놀아도 놀아도 계속 놀고싶은 요즘!!!</p></a>
+                  <p class="review-text">포스팅 몰아하기..(요즘 바빠서 정성이 부족ㅋㅋㅋㅋㅋㅋㅋㅋㅋ) 거의 3월꺼는 패스네ㅠ 20170401 볼링!!!!! 킁.. 난 이런 분위기가 넘 죠앙........................ 키키키키 이날은 포켓볼 사격 카트 회+소맥 볼링 핫도그 맥주 제대로 놀기 끝판왕 ㅋㅋㅋ 완죠니 형광볼~~~~~ 신나능 노래...</p>
+                </div>
+              </div><!-- play-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/play/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/play1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play14_view").innerHTML = localStorage.play14_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>play_movie_reservation</title>
+    <link rel="stylesheet" href="../css/play_movie.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="theater" id="theater">
+            <div class="theater-image">
+              <img src="../image/play/play15_CGV.png" width="500px" height="200px"/>
+            </div>
+            <div class="theater-contents">
+              <div class="theater-title">
+                <h3>CGV 영화관</h3>
+              </div>
+              <div class="theater-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="movie-type">영화</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="movie_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="movie-review">2</span></p>
+              </div>
+              <div class="theater-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="theater-gpa">0.0</span>
+              </div>
+              <div class="theater-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('010-4174-8861')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B033'20.5%22N+127%C2%B004'42.2%22E/@37.555704,127.0762093,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.555704!4d127.078398"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./play15_reserve.html"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 영화 리스트 -->
+        <div class="movie-reservation">
+          <div class="reservation">
+            <h3>예약 하기</h3>
+          </div>
+          <div class="movie-list">
+            <table>
+              <tr class="movie-infor">
+                <td>
+                  <div class="movie-image">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000060990&t_tab=1"><img src="../image/play/movie/movie1_원더우먼.png" height="200px"></a>
+                  </div>
+                </td>
+                <td class="movie-contents">
+                  <div class="moive-name">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000060990&t_tab=1"><h2>원더우먼</h2></a>
+                  </div>
+                <div class="movie-contents-cont">
+                  <p>종류&nbsp;&nbsp;&nbsp;<span id="movie-type">액션,모험,판타지,SF</span></p>
+                  <br>
+                  <p>조회수&nbsp;&nbsp;&nbsp;<span id="movie_view">0</span></p>
+                  <p>상영시간&nbsp;&nbsp;&nbsp;<span id="movie-review">141 분</span></p>
+                </div>
+                <div class="movie-contents-gpa">
+                  <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                  <span id="movie-gpa">7.93</span>
+                </div>
+                </td>
+              </tr>
+              <tr class="movie-infor">
+                <td>
+                  <div class="movie-image">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000058204&t_tab=1"><img src="../image/play/movie/movie2_미이라.jpg" height="200px"></a>
+                  </div>
+                </td>
+                <td class="movie-contents">
+                  <div class="moive-name">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000058204&t_tab=1"><h2>미이라</h2></a>
+                  </div>
+                <div class="movie-contents-cont">
+                  <p>종류&nbsp;&nbsp;&nbsp;<span id="movie-type">액션,모험,판타지</span></p>
+                  <br>
+                  <p>조회수&nbsp;&nbsp;&nbsp;<span id="movie_view">0</span></p>
+                  <p>상영시간&nbsp;&nbsp;&nbsp;<span id="movie-review">110 분</span></p>
+                </div>
+                <div class="movie-contents-gpa">
+                  <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                  <span id="movie-gpa">7.50</span>
+                </div>
+                </td>
+              </tr>
+              <tr class="movie-infor">
+                <td>
+                  <div class="movie-image">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000062032&t_tab=1"><img src="../image/play/movie/movie3_악녀.jpg" height="200px"></a>
+                  </div>
+                </td>
+                <td class="movie-contents">
+                  <div class="moive-name">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000062032&t_tab=1"><h2>악녀</h2></a>
+                  </div>
+                <div class="movie-contents-cont">
+                  <p>종류&nbsp;&nbsp;&nbsp;<span id="movie-type">액션</span></p>
+                  <br>
+                  <p>조회수&nbsp;&nbsp;&nbsp;<span id="movie_view">0</span></p>
+                  <p>상영시간 &nbsp;&nbsp;&nbsp;<span id="movie-review">123 분</span></p>
+                </div>
+                <div class="movie-contents-gpa">
+                  <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                  <span id="movie-gpa">7.75</span>
+                </div>
+                </td>
+              </tr>
+              <tr class="movie-infor">
+                <td>
+                  <div class="movie-image">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000065108&t_tab=1"><img src="../image/play/movie/movie5_노무현입니다.jpg" height="200px"></a>
+                  </div>
+                </td>
+                <td class="movie-contents">
+                  <div class="moive-name">
+                    <a href="http://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000065108&t_tab=1"><h2>노무현입니다</h2></a>
+                  </div>
+                <div class="movie-contents-cont">
+                  <p>종류&nbsp;&nbsp;&nbsp;<span id="movie-type">다큐멘터리</span></p>
+                  <br>
+                  <p>조회수&nbsp;&nbsp;&nbsp;<span id="movie_view">0</span></p>
+                  <p>상영시간&nbsp;&nbsp;&nbsp;<span id="movie-review">109 분</span></p>
+                </div>
+                <div class="movie-contents-gpa">
+                  <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                  <span id="movie-gpa">9.01</span>
+                </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/inn1-detail.js"></script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

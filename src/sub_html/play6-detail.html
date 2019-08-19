@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="play"></title>
+    <link rel="stylesheet" href="../css/play1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['A.1시간 패키지(1hr+음료)', 4700],
+          ['B.2시간 패키지(2hr+음료)', 6500],
+          ['C.3시간 패키지(3hr+음료)', 7500],
+          ['D. 6시간요금제(6hr+음료)', 13000],
+          ['E. 시간요금제(1hr당)', 2400]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="play" id="play6">
+            <div class="play-image">
+              <a href="./play-detail.html"><img src="../image/play/play6_카페 데코믹스.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a href="./play-detail.html"><h3>카페 데코믹스</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play6-type">오락실/멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play6-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play6-gpa">0.0</span>
+              </div>
+              <div class="play-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-465-1222')"><img src="../image/play/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B032'36.4%22N+127%C2%B004'18.8%22E/@37.5434444,127.0697002,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.543448!4d127.071884"><img src="../image/play/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/play/star.png" alt="" width="50px" /></a><p>추천</p></li>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- play6 -->
+          <div class="explanation">
+            <p>#감성이 살아 숨쉬는 문화 힐링공간 카페데코믹스</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 화양동 3-22 지층</p>
+                <p>*&nbsp;영업시간: 일~목 10:00 ~ 03.00 금,토 10:00 ~ 05:00</p>
+                <p>*&nbsp;전화번호: 02-465-1222</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: X</p>
+                <p>*&nbsp;인근지하철: 7호선 건대입구, 2호선 건대입구, 7호선 어린이대공원</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.543448, lng : 127.071884},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="play-review-001">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://m.post.naver.com/viewer/postView.nhn?volumeNo=7197930&memberNo=34545175&vType=VERTICAL"><p>비오는날 데이트 하기 좋은 곳 추천</p></a>
+                  <p class="review-text">바이닐앤플라스틱 영업시간 : 12:00 - 21:00 (주말 18:00까지, 월요일 휴무)현대카드 없이도 방문 가능! 바이닐앤플라스틱 서울특별시 용산구 이태원로 248 카페데코믹스 건대점 영업시간 : 10:00 - 03:00 (금.토 10:00 - 05:00)고양이가 운영하는 만화카페! 카페데코믹스 건대점 서울특별시 광진구 능동로 141 링고링고 영업시간 : 12:00 - 20:00커플 데이트 장소1순위!커플링 만들기 카페 링고링고 서울특별시 강동구 천호대로155길 13 레전드야구존 영업시간 : 10...</p>
+                </div>
+              </div><!-- play-review-001 -->
+              <div class="review-contents" id="play-review-002">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://m.post.naver.com/viewer/postView.nhn?volumeNo=6554659&memberNo=15409580&vType=VERTICAL"><p>건대 데이트 저렴한 가격으로 꽁냥꽁냥 실내에서 노는 꿀팁♡</p></a>
+                  <p class="review-text">건대 데이트 만화카페 건대에서 오픈한지 별로 안된 만화카페!'카페 데 코믹스'란 곳을 소개할건데다른 곳과 차별점을 말하라면귀여운 고양이들이 제법 많다는 점입니다.고양이를 싫어하시는 분들에겐 어쩔 수 없지만그 외에 동물을 애정하시는 분들 많으시죠?재밌는 책도 읽고, 고양이도 구경하고!저렴한 실내 데이트로 추천하고 싶은 곳이에요♡ 요금표와 이용방법 카페 데 코믹스는 1시간 요금이 2,400원으로음료 또는 라면과 함께 즐길 수 있는다양한 요금제로 나눠져 있는데이건 각자...</p>
+                </div>
+              </div><!-- play-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>A.1시간 패키지(1hr+음료)</strong>      4,700 원</li>
+                  <li><strong>B.2시간 패키지(2hr+음료)</strong>      6,500 원</li>
+                  <li><strong>C.3시간 패키지(3hr+음료)</strong>      7,500 원</li>
+                  <li><strong>D. 6시간요금제(6hr+음료)</strong>      13,000 원</li>
+                  <li><strong>E. 시간요금제(1hr당)</strong>      2,400 원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/play/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/play1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play6_view").innerHTML = localStorage.play6_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

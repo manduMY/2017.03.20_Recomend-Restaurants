@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="play"></title>
+    <link rel="stylesheet" href="../css/play1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="play" id="play4">
+            <div class="play-image">
+              <a href="./play-detail.html"><img src="../image/play/play4_THE BOX.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a href="./play-detail.html"><h3>THE BOX</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play4-type">오락실/멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play4-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play4-gpa">0.0</span>
+              </div>
+              <div class="play-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-3409-4635')"><img src="../image/play/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B032'54.5%22N+127%C2%B004'15.6%22E/@37.548464,127.0687983,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.548464!4d127.070987"><img src="../image/play/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/play/star.png" alt="" width="50px" /></a><p>추천</p></li>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- play4 -->
+          <div class="explanation">
+            <p>#THE BOX는 영화나 게임을 통해 눈으로만 보고 즐기던 것에서 벗어나 다양한 장르의 테마의 방안에 갇혀 실제로 체험할 수 있는 신개념 놀이문화입니다.
+오랜 시간 준비를 통해 만들어진 수십 가지 이상의 테마들과 국내 유일의 인테리어 및 디자인 더불어 독자적으로 개발한 특별한 첨단장치들로 실제보다 더 실제 같은 경험을 제공합니다.
+현재 전 세계적으로 연인의 데이트 코스. 회사의 워크샵, 가족의 모임 장소 등 세대를 구분 하지
+않고 폭발적인 인기를 누리고 있습니다.
+똑 같은 일상, 똑 같은 데이트, 똑같은 워크샵 매일 반복되는 지루한 일상에서 벗어나고 싶은 여러분들에게 잊지 못할 추억을 선사 할 것입니다.
+</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 광나루로 369</p>
+                <p>*&nbsp;영업시간: 주중 12:00 ~ 24:00 주말 10:00 ~ 24:00</p>
+                <p>*&nbsp;전화번호: 02-3409-4635</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: O</p>
+                <p>*&nbsp;인근지하철: 7호선 어린이대공원</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.548464, lng : 127.070987},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="play-review-001">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://post.naver.com/viewer/postView.nhn?volumeNo=6996494&memberNo=15409580&vType=VERTICAL"><p>건대놀거리 불금에 더 스릴있는 더박스(The Box)</p></a>
+                  <p class="review-text">건대놀거리편: 더박스 핫한 거리가 더욱 뜨겁게 달아오를 주말 밤. 벌써 불금이 한 차례 또 다시 돌아왔다. 그래서 오늘은 이색적인 건대놀거리 '더박스'를 소개해 보려 한다. 더박스는 건대방탈출카페로 유명해서 아마 들어본 사람들이 많을 것 같은데 직접 체험한 ...</p>
+                </div>
+              </div><!-- play-review-001 -->
+              <div class="review-contents" id="play-review-002">
+                <div class="people-photo">
+                  <img src="../image/play/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/wjdgus1662/221022400179"><p>건대방탈출카페 :: 깔끔한 인테리어의 '더박스' 건대점 다녀왔어요!</p></a>
+                  <p class="review-text">안녕하세요 고급좌석입니다! 방탈출카페 매니아로 방탈출카페를 10번넘에 정말 자주 갔는데, 회사가 바빠서 한동안 통 못갔죠 ㅠㅠ 그래서 지난 주말 친구들과 정말 오랫만에 방탈출 카페를 다녀왔답니다! 건대...</p>
+                </div>
+              </div><!-- play-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/play/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/play1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play4_view").innerHTML = localStorage.play4_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

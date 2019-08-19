@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="beauty"></title>
+    <link rel="stylesheet" href="../css/beauty1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./beauty.html">beauty/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="beauty" id="beauty5">
+            <div class="beauty-image">
+              <a href="./beauty-detail.html"><img src="../image/beauty/beauty5_퀸스성형외과.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a href="./beauty-detail.html"><h3>퀸스성형외과</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty5-type">성형외과</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty5-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="beauty5-gpa">0.0</span>
+              </div>
+              <div class="beauty-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-447-2808')"><img src="../image/beauty/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/beauty/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/beauty/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./beauty5-stock.html"><img src="../image/beauty/magnifying-glasses.png" alt="" width="50px" /></a><p>재고조회</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- beauty5 -->
+          <div class="explanation">
+            <p>#동양의 전통적인 민간요법을 바탕으로 휴식과 에너지 충전의 새로운 문화 휴식공간</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울시 광진구 능동로 50 이튼타워리버2차</p>
+                <p>*&nbsp;영업시간: (월-금)09:30 – 18:00 (토)09:30 – 14:00</p>
+                <p>*&nbsp;전화번호: 02-447-2808</p>
+                <p>*&nbsp;휴무일: 일</p>
+                <p>*&nbsp;주차시설: 건물 내 무료 주차 가능</p>
+                <p>*&nbsp;인근지하철: 7호선 건대입구, 2호선 건대입구</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.550294, lng: 127.073193},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="beauty-review-001">
+                <div class="people-photo">
+                  <img src="../image/beauty/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                </div>
+              </div><!-- beauty-review-001 -->
+              <div class="review-contents" id="beauty-review-001">
+                <div class="people-photo">
+                  <img src="../image/beauty/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                </div>
+              </div><!-- beauty-review-001 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>수술 부위</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li>
+                    <strong>눈/코성형</strong>
+                    <strong>피부/비만</strong>
+                    <strong>모발이식,미용</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>공백</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/beauty/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/beauty1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("beauty5_view").innerHTML = localStorage.beauty5_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

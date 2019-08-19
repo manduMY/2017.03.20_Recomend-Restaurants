@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="food"></title>
+    <link rel="stylesheet" href="../css/food1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['김치라이스',  9000],
+          ['스노우 크림치즈 파스타',  14000],
+          ['홈메이드 버거',  11000],
+          ['민트 아메리카노',  3000]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="food" id="food6">
+            <div class="food-image">
+              <a href="./food-detail.html"><img src="../image/food/food6_바나나토크.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a href="./food-detail.html"><h3>바나나토크</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food6-type">양식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food6-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="food6-gpa">0.0</span>
+              </div>
+              <div class="food-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-467-3370')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="#"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- food6 -->
+          <div class="explanation">
+            <p>#제주식 숙성 삼겹살이 맛있는 저렴한 어린이대공원 고기 집</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울 광진구 능동로 237</p>
+                <p>*&nbsp;영업시간: 11:00 - 23:00</p>
+                <p>*&nbsp;전화번호: 02-467-3370</p>
+                <p>*&nbsp;휴무일: x</p>
+                <p>*&nbsp;주차시설: 건물뒷편 유료주차 가능</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.551254, lng: 127.076164},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="food-review-001">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/kimibaby/221006122598"><p>[건대/어린이대공원맛집] 테라스가 예쁜 브런치카페 '바나나토크...</p></a>
+                  <p class="review-text">건대맛집 검색중에, 간만에 브런치가 먹고싶어 바나나토크 gogo 5년전쯤인가? 어린이대공원쪽에 이쁜 카페가 있다며 찾아왔던게 기억나네용ㅎㅎㅎ 대로변에 위치한 브런치카페 바나나토크예요 이 근방에는 세종대랑...</p>
+                </div>
+              </div><!-- food-review-001 -->
+              <div class="review-contents" id="food-review-002">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/evgirl/220995590955"><p>어린이대공원/세종대 맛집♥바나나톡(banana talk)/바나나토크</p></a>
+                  <p class="review-text">세종대 근처에서 친구들과 쇼핑을 하고 아주 굶주린 상태로 세종대 바로 옆에 바나나토크라는 파스타와 수제버거 미니피자 등을 판매하는 카페 겸 레스토랑을 갔다 여기 동네 살면서 요런데가 있는지 첨 알았다 맨날...</p>
+                </div>
+              </div><!-- food-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>김치라이스</strong> : 9,000원</li>
+                  <li><strong>스노우 크림치즈 파스타</strong> : 14,000원</li>
+                  <li><strong>홈메이드 버거</strong> : 11,000원</li>
+                  <li><strong>민트 아메리카노</strong> : 3,000원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <p>모든것이 국내산</p>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <p>홀서빙 : 00명</p>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/food/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/food6-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("food6_view").innerHTML = localStorage.food6_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

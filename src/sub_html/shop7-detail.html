@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="shop"></title>
+    <link rel="stylesheet" href="../css/shop1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="shop" id="shop7">
+            <div class="shop-image">
+              <a href="./shop-detail.html"><img src="../image/shop/shop7_스플렌디노.jpg" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a href="./shop-detail.html"><h3>스플렌디노</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop7-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop7-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop7-gpa">0.0</span>
+              </div>
+              <div class="shop-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-6747-8391')"><img src="../image/shop/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B4%91%EC%A7%84%EA%B5%AC+%EC%9E%90%EC%96%91%EB%8F%99+10-47/@37.5404829,127.0643039,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4ebda1a1853:0x73ad96122e525370!8m2!3d37.5404829!4d127.0664926"><img src="../image/shop/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/shop/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./shop7-stock.html"><img src="../image/shop/magnifying-glasses.png" alt="" width="50px" /></a><p>재고조회</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- shop7 -->
+          <div class="explanation">
+            <p>#20대 30대 남성복 스트릿패션, 맨투맨, 자켓, 팬츠, 아우터 등 판매.</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 자양동 10-47</p>
+                <p>*&nbsp;영업시간: 평일 11:00 ~ 21:00 , 주말 11:00 ~ 20:00 , 공휴일 11:00 ~ 20:00</p>
+                <p>*&nbsp;전화번호: 02-465-9799</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: X</p>
+                <p>*&nbsp;인근지하철: 2호선 건대입구, 7호선 건대입구</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.540508, lng : 127.066546 },
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="shop-review-001">
+                <div class="people-photo">
+                  <img src="../image/shop/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.daum.net/rocroc/13215084"><p>발망자켓 및 여자원피스맞춤 스플렌디노건대</p></a>
+                  <p class="review-text">여성분들이 건대스플렌디노 를 찾아주시고 계시는데요 금일은 제작가능한 스타일과 실제로 제작된 결과물들을 살펴보기로 하겠습니다. 더블브레스트 에 금장 단추는...</p>
+                </div>
+              </div><!-- shop-review-001 -->
+              <div class="review-contents" id="shop-review-002">
+                <div class="people-photo">
+                  <img src="../image/shop/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/rina5465?Redirect=Log&logNo=220970831978"><p>여성맞춤정장 스플렌디노건대 에서~!!</p></a>
+                  <p class="review-text">된 스플렌디노 건대점 클래식을 겸비한 여성맞춤정장 트렌디한 아이템으로 맞춤 제작이 가능하다 좋은 원단이 다양하게 있어서 마음에 드는 원단을 쉽게 찾을수 있고...</p>
+                </div>
+              </div><!-- shop-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('02-6747-8391')"><img src="../image/shop/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/shop1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("shop7_view").innerHTML = localStorage.shop7_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

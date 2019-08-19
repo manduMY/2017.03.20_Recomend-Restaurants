@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="machine">헬스장 머신 조회</title>
+    <link rel="stylesheet" href="../css/machine.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['NULL',  0],
+        ]);
+
+        var options = {
+          title: 'NULL',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <a href="./food.html">
+          <img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/>
+        </a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav>
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Play</a></li>
+          <li><a href="#">Inn/Motel/Hotel</a></li>
+          <li><a href="#">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="machine" id="machine1">
+            <div class="machine-image">
+              <a href="./beauty-detail.html"><img src="../image/beauty/beauty6_휘트니스베이.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="machine-contents">
+              <div class="machine-title">
+                <h3><a href="#">휘트니스베이</a></h3><!--a링크, 헬스장 이름-->
+              </div>
+              <div class="machine-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty6-type">헬스장</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty6_review">2</span></p>
+              </div>
+              <div class="machine-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="machine1-gpa">0.0</span>
+              </div>
+              <div class="machine-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-462-7666')"><img src="../image/beauty/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/beauty/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/beauty/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./beauty6-stock.html"><img src="../image/beauty/magnifying-glasses.png" alt="" width="50px" /></a><p>재고조회</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="machine-check">
+            <div class="machine-stock">
+              <h2>머신 조회</h2>
+            </div>
+            <div class="machine-infor">
+              <div class="machine-name">
+                <h3>머신 이름</h3>
+              </div>
+              <div class="machine-amount">
+                <h3>수량</h3>
+              </div>
+              <div class="machine-table">
+                <table>
+                  <tr>
+                    <td class="name">인클라인 벤치프레스</td>
+                    <td class="stock">3</td>
+                  </tr>
+                  <tr>
+                    <td>아령 3kg</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>아령 5kg</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>아령 7kg</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>아령 9kg</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>런닝 머신</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>레그 프레스</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>데드 리프트</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>로우 케이블</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>랫 풀 다운 머신</td>
+                    <td>3</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div><!--machine-wrapper-->
+      </section>
+    </div>
+      <div class="fixed-bar">
+        <div class="top-button">
+          <a href="#"><span>△TOP</span></a>
+        </div>
+      </div>
+      <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+    </body>
+    <script type="text/javascript">
+      document.getElementById("beauty6_view").innerHTML = localStorage.beauty6_view;
+    </script>
+  </html>

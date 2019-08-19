@@ -1,0 +1,194 @@
+* {margin: 0; padding: 0; font-family: "my all font";}
+html, body {height: 100%;}
+@font-face{
+  font-family: "my nav font";
+  src : url('../ttf/NanumBarunpenB.ttf');
+}
+@font-face {
+  font-family: "my food reserve title font";
+  src : url('../ttf/NanumBarunpenR.ttf');
+}
+@font-face {
+  font-family: "my all font";
+  src : url('../ttf/NanumSquareB.ttf');
+}
+/* --------------------------- page-wrapper ---------------------*/
+.page-wrapper {
+  width:800px;
+  margin:0 auto;
+
+}
+header {
+  clear:left; /*  ???  */
+  text-align:center;
+  align-items: center;
+  margin-top:30px;
+}
+nav {
+  border: 3px solid black;
+  margin: 20px 0;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li a{
+  font-family: "my nav font";
+}
+nav ul li > a:hover{
+  text-shadow: 2px 2px black;
+  font-size: 1.2em;
+  color: white;
+}
+nav ul a:first-child {
+  margin-left: 40px;
+}
+nav ul a {
+  margin-right: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+section {
+  overflow:hidden;
+}
+.category {
+  overflow:hidden;
+}
+.category > li {
+  float : left;
+  margin: 5px 10px;
+  padding: 2px 5px;
+}
+/*--------------------------section ---------------------*/
+.contents-wrapper{
+
+}
+.food-reserve {
+  overflow:hidden;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.food-reserve-image {
+  float:left;
+  margin-right: 30px;
+}
+.food-reserve-contents {
+  margin-top: 10px;
+  float:left;
+  width: 270px;
+  overflow: hidden;
+}
+.food-reserve-title h3 {
+  font-family: "my food reserve title font";
+}
+.food-reserve-contents-cont * {
+  margin-top:10px;
+  font-family: "my food reserve title font";
+}
+.food-reserve-contents-gpa {
+height:25px;
+}
+.food-reserve-contents-gpa > * {
+  float: right;
+  margin-right: 10px;
+}
+.food-reserve-contents-fnbutton {
+}
+.food-reserve-contents-fnbutton > ul {
+  list-style: none;
+  overflow: hidden;
+}
+.food-reserve-contents-fnbutton > ul > li {
+  float:left;
+  font-size: 0.75em;
+  text-align: center;
+  margin-right: 16px;
+}
+.reservation-page{
+  overflow: hidden;
+  margin-top: 20px;
+}
+.reservation{
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.table-reserve{
+  float: left;
+  width: 370px;
+  margin-left: 5px;
+}
+.people{
+  overflow: hidden;
+  margin: 15px 0;
+}
+.reserve-people{
+  float: left;
+  margin-right: 50px;
+}
+.waiting-people{
+}
+.table-infor{
+  margin: 30px 10px;
+  font-size: 18px;
+  font-style: solid black;
+}
+.table-infor>ul>li{
+  margin: 10px 0;
+}
+.sumit{
+font-size: 15px;
+<!-- 사이즈 키우고 싶다 -->
+}
+.table{
+  float: right;
+}
+.table-diagram{
+
+}
+.table-image{
+  margin: 10px 0px;
+}
+/* ----------------------- footer ----------------------------*/
+footer{
+  position:fixed;
+
+  left: 40%; bottom:10px;
+}
+footer > p{
+  color: silver;
+}
+/* ----------------------- fixed-bar ----------------------------*/
+body {
+  position:relative;
+}
+.fixed-bar {
+  display: inline-block;
+  width: 100px; height: 50px;
+
+  border: 5px solid black;
+  border-radius: 3px;
+  background: white;
+  position:fixed;
+
+  top:30%;
+  right:10%;
+  /*top: 339px;
+  right: 195px;*/
+}
+.fixed-bar span {
+  margin-top: 10px;
+  text-align:center;
+}
+.top-button {
+  position: relative;
+}
+.top-button > a {
+  position: absolute;
+
+  top: 13px;
+  left: 21px;
+}

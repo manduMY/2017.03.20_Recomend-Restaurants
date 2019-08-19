@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="food"></title>
+    <link rel="stylesheet" href="../css/food1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['제주식 숙성 목살(반근)',  12900],
+          ['제주식 숙성 삼겹살(반근)',  12900],
+          ['수원돼지갈비(1대)',  11000],
+          ['눈내린살치살(반근): 19,900원 (한근)',  19900],
+          ['계란찜', 3000],
+          ['된장찌개', 1000]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="food" id="food5">
+            <div class="food-image">
+              <a href="./food-detail.html"><img src="../image/food/food5_세종원.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a href="./food-detail.html"><h3>세종원</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food5-type">중식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food5-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="food5-gpa">0.0</span>
+              </div>
+              <div class="food-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-499-1800')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="#"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- food5 -->
+          <div class="explanation">
+            <p>#세종대생에게 사랑 받는 세종대 중국집</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울 광진구 광나루로 373</p>
+                <p>*&nbsp;영업시간: 10:30 - 21:00</p>
+                <p>*&nbsp;전화번호: 02-499-1800</p>
+                <p>*&nbsp;휴무일: x</p>
+                <p>*&nbsp;주차시설: X</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.548149, lng: 127.074518},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="food-review-001">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/awesomehair/220886625210"><p>오늘 점심 뭐먹지??추울땐 역시 짬뽕~!!</p></a>
+                  <p class="review-text">오늘 점심 뭐먹지??추울떈 역시 짬뽕~~!! 점심에 뭐먹지 뭐먹지하다~~ 역시~ 간편하게 ~ 먹을수 있는 음식.. 역시 중화요리다..ㅋㅋ 요새 안그래두 짬뽕이 그리 땡기더구만~!! 짬뽕뽕~!~! 세종원 서울특별시 광진구 광나루로 373...</p>
+                </div>
+              </div><!-- food-review-001 -->
+              <div class="review-contents" id="food-review-002">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/124455/220724045004"><p>세종대맛집,군자동 맛집 중국집 세종원(원라이스세트)</p></a>
+                  <p class="review-text">대학때 친구와 즐거먹었던 만강홍의 만강짜장라이스가 있었는데 그집이 세종원로 이름을 바꾼지는 한참됬다 오랜만에 평일에 함께 대학때 동고동락하던 친구를 만나게되어 오랜만에 세종원에 방문하게 되었다 그때의...</p>
+                </div>
+              </div><!-- food-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>짜장면</strong> : 4,000원</li>
+                  <li><strong>간짜장</strong> : 4,500원</li>
+                  <li><strong>짬뽕</strong> : 5,000원</li>
+                  <li><strong>볶음밥</strong> : 5,000원</li>
+                  <li><strong>군만두</strong> : 4,500원</li>
+                  <li><strong>탕수육(소)</strong> : 12,000원 (중): 16,000원 (대): 22,000원 </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <p>모든것이 국내산</p>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <p>홀서빙 : 00명</p>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/food/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/food5-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("food5_view").innerHTML = localStorage.food5_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

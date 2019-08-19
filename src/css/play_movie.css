@@ -1,0 +1,194 @@
+* {margin: 0; padding: 0; font-family: "my all font";}
+html, body {height: 100%;}
+@font-face{
+  font-family: "my nav font";
+  src : url('../ttf/NanumBarunpenB.ttf');
+}
+@font-face {
+  font-family: "my theater title font";
+  src : url('../ttf/NanumBarunpenR.ttf');
+}
+@font-face {
+  font-family: "my all font";
+  src : url('../ttf/NanumSquareB.ttf');
+}
+/* --------------------------- page-wrapper ---------------------*/
+.page-wrapper {
+  width:800px;
+  margin:0 auto;
+
+}
+header {
+  clear:left; /*  ???  */
+  text-align:center;
+  align-items: center;
+  margin-top:30px;
+}
+nav {
+  border: 3px solid black;
+  margin: 20px 0;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li a{
+  font-family: "my nav font";
+}
+nav ul li > a:hover{
+  text-shadow: 2px 2px black;
+  font-size: 1.2em;
+  color: white;
+}
+nav ul a:first-child {
+  margin-left: 40px;
+}
+nav ul a {
+  margin-right: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+article ul {
+  list-style: none;
+}
+section {
+  overflow:hidden;
+}
+.category {
+  overflow:hidden;
+}
+.category > li {
+  float : left;
+  margin: 5px 10px;
+  padding: 2px 5px;
+}
+/*--------------------------section ---------------------*/
+/* border:.* solid .*; -> NULL */
+.contents-wrapper{
+
+}
+.theater {
+  overflow:hidden;
+  margin-top: 20px;
+}
+.theater-image {
+  float:left;
+  margin-right: 30px;
+}
+.theater-contents {
+  margin-top: 10px;
+  float:left;
+  width: 270px;
+  overflow: hidden;
+}
+.theater-title h3 {
+  font-family: "my theater title font";
+}
+.theater-contents-cont * {
+  margin-top:10px;
+  font-family: "my theater title font";
+}
+.theater-contents-gpa {
+  height:25px;
+}
+.theater-contents-gpa > * {
+  float: right;
+  margin-right: 10px;
+}
+.theater-contents-fnbutton {
+}
+.theater-contents-fnbutton > ul {
+  list-style: none;
+  overflow: hidden;
+}
+.theater-contents-fnbutton > ul > li {
+  float:left;
+  font-size: 0.75em;
+  text-align: center;
+  margin-right: 16px;
+}
+/*--영화 리스트--*/
+.movie-reservation{
+  overflow: hidden;
+  mar
+}
+.reservation{
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.movie-list{
+  height : 500px;
+  overflow-y: scroll;
+}
+.movie-list>li{
+  height: 170px;
+}
+.movie-infor{
+  margin: 10px 0;
+}
+.movie{
+  padding: 5px 0;
+}
+.movie-reservation>ul{
+  list-style: none;
+}
+.movie-image{
+  float: left;
+  margin-right: 250px;
+}
+.movie-contents{
+  width: 350px;
+}
+.movie-contents-cont * {
+  margin-top:10px;
+  font-family: "my theater title font";
+}
+.movie-contents-gpa {
+  height:25px;
+}
+.movie-contents-gpa > * {
+  float: right;
+  margin-right: 10px;
+}
+/* ----------------------- footer ----------------------------*/
+footer{
+  position:fixed;
+
+  left: 40%; bottom:10px;
+}
+footer > p{
+  color: silver;
+}
+/* ----------------------- fixed-bar ----------------------------*/
+body {
+  position:relative;
+}
+.fixed-bar {
+  display: inline-block;
+  width: 100px; height: 50px;
+
+  border: 5px solid black;
+  border-radius: 3px;
+  background: white;
+  position:fixed;
+
+  top:30%;
+  right:10%;
+  /*top: 339px;
+  right: 195px;*/
+}
+.fixed-bar span {
+  margin-top: 10px;
+  text-align:center;
+}
+.top-button {
+  position: relative;
+}
+.top-button > a {
+  position: absolute;
+
+  top: 13px;
+  left: 21px;
+}

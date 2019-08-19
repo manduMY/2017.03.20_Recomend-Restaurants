@@ -1,0 +1,161 @@
+* {margin: 0; padding: 0; font-family: "my all font";}
+html, body {height: 100%;}
+@font-face{
+  font-family: "my nav font";
+  src : url('../ttf/NanumBarunpenB.ttf');
+}
+@font-face {
+  font-family: "my shop title font";
+  src : url('../ttf/NanumBarunpenR.ttf');
+}
+@font-face {
+  font-family: "my all font";
+  src : url('../ttf/NanumSquareB.ttf');
+}
+/* --------------------------- page-wrapper ---------------------*/
+.page-wrapper {
+  width:800px;
+  margin:0 auto;
+}
+
+header {
+  clear:left; /*  ???  */
+  text-align:center;
+  align-items: center;
+
+  margin-top:30px;
+}
+nav {
+  border: 3px solid black;
+  margin: 20px 0;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li a{
+  font-family: "my nav font";
+}
+nav ul li > a:hover{
+  text-shadow: 2px 2px black;
+  font-size: 1.2em;
+  color: white;
+}
+nav ul a:first-child {
+  margin-left: 40px;
+}
+nav ul a {
+  margin-right: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+article ul {
+  list-style: none;
+}
+section {
+  overflow:hidden;
+}
+.category {
+  overflow:hidden;
+}
+.category > li {
+  float : left;
+
+  margin: 5px 10px;
+  padding: 2px 5px;
+}
+.shop{
+  margin-top: 20px;
+  overflow: hidden;
+}
+.shop-image{
+  float: left;
+  margin-right: 30px;
+}
+.shop-contents{
+  margin-top: 10px;
+  overflow: hidden;
+}
+.shop-title h3 {
+  font-family: "my shop title font";
+}
+.shop-contents-cont * {
+  margin-top:10px;
+  font-family: "my shop title font";
+}
+.shop-contents-gpa{
+  height: 25px;
+}
+.shop-contents-gpa>*{
+  float: right;
+  margin-right: 10px;
+}
+.shop-contents-fnbutton{
+}
+.shop-contents-fnbutton>ul{
+  list-style: none;
+  overflow: hidden;
+}
+.shop-contents-fnbutton > ul > li {
+  float:left;
+  font-size: 0.75em;
+  text-align: center;
+  margin-right: 16px;
+}
+.stock-infor{
+}
+.stock-title{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+table{
+  width: 800px;
+  height: 300px;
+  border-collapse: collapse;  /*두줄 보더를 한줄로*/
+}
+th{
+}
+.row_1 {
+  background: silver;
+}
+.number, .suryang{
+  text-align: center;
+}
+.tbody-wrapper{
+  height: 100px;
+  border: 3px solid black;
+  overflow: scroll;
+}
+/* ----------------------- fixed-bar ----------------------------*/
+body {
+  position:relative;
+}
+.fixed-bar {
+  display: inline-block;
+  width: 100px; height: 50px;
+
+  border: 5px solid black;
+  border-radius: 3px;
+  background: white;
+  position:fixed;
+
+  top:30%;
+  right:10%;
+  /*top: 339px;
+  right: 195px;*/
+}
+.fixed-bar span {
+  margin-top: 10px;
+  text-align:center;
+}
+.top-button {
+  position: relative;
+}
+.top-button > a {
+  position: absolute;
+
+  top: 13px;
+  left: 21px;
+}

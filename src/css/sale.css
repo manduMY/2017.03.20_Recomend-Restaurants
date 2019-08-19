@@ -1,0 +1,18 @@
+.sale-info {
+  position: relative;
+  list-style: none;
+  height:50px;  /*  요소가 겹칠 경우 이 값을 늘려주세요! */
+}
+.sale-list {
+  position: absolute;
+  left:15%;
+  list-style: none;
+}
+.sale-list>li{
+}
+.sale-list img{
+  margin-right: 15px;
+}
+.sale-list li>span{
+  color: blue;
+}

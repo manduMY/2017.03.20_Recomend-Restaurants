@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>쇼핑페이지</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/sale.css">
+		<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+        <article class="traverse-bar">
+          <div class="pull-left">
+            <ul class="category">
+              <li><input id="all" type="radio" name="nav_group" value="all" /><label for="all">전체</label></li>
+              <li><input id="compfashion" type="radio" name="nav_group" value="compfashion" /><label for="compfashion">종합의류</label></li>
+              <li><input id="multiflex" type="radio" name="nav_group" value="multiflex" /><label for="multiflex">멀티플렉스</label></li>
+              <li><input id="stationery" type="radio" name="nav_group" value="stationery" /><label for="stationery">문구/팬시용품</label></li>
+              <li><input id="glasses" type="radio" name="nav_group" value="glasses" /><label for="glasses">안경</label></li>
+              <li><input id="computer" type="radio" name="nav_group" value="computer" /><label for="computer">컴퓨터</label></li>
+            </ul>
+          </div>
+          <div class="pull-right">
+            <div class="search-bar">
+              <form>
+                <input type="text" class="input_search" />
+                <button type="button" name="button" class="input-search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </article>
+      <div class="sale-info">
+        <ul class="sale-list">
+          <a href="http://swindow.naver.com/style/store/1000004413/news/detail/1000033250"><li><img src="../image/bell.png" width="20" alt="" /> <span>썸모어 땡큐 : 베스트리뷰-쿠폰증정</span></li></a>
+          <a href="http://www.uniqlo.kr/display/displayShop.lecs?storeNo=22&siteNo=9&displayNo=UQ1A02A01A93&tracking=c1_bnr_07"><li><img src="../image/bell.png" width="20" alt="" /> <span>유니클로 : 봄/여름 상품 초특가 ￦5,000 ~</span></li></a>
+        </ul>
+      </div>
+      <section>
+        <div class="contents-wrapper">
+          <br>
+
+          <div class="shop" id="shop1">
+            <div class="shop-image">
+              <a onclick="shop1_clicked()" href="./shop1-detail.html"><img src="../image/shop/shop1_KYONA.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop1_clicked()" href="./shop1-detail.html"><h3 id="title_name1">KYONA</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop1-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop1-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop1-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop1 -->
+
+          <br>
+          <div class="shop" id="shop2">
+            <div class="shop-image">
+              <a onclick="shop2_clicked()" href="./shop2-detail.html"><img src="../image/shop/shop2_썸모어땡큐.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop2_clicked()" href="./shop2-detail.html"><h3 id="title_name2">썸모어땡큐</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop2-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop2_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop2-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop2 -->
+
+          <br>
+          <div class="shop" id="shop3">
+            <div class="shop-image">
+              <a onclick="shop3_clicked()" href="./shop3-detail.html"><img src="../image/shop/shop3_커먼그라운드 셀렉트샵.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop3_clicked()" href="./shop3-detail.html"><h3 id="title_name3">커먼그라운드 셀렉트샵</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop3-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop3_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop3-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop3-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop3 -->
+
+          <br>
+          <div class="shop" id="shop4">
+            <div class="shop-image">
+              <a onclick="shop4_clicked()" href="./shop4-detail.html"><img src="../image/shop/shop4_스타시티몰.jpg" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop4_clicked()" href="./shop4-detail.html"><h3 id="title_name4">스타시티몰</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop4-type">멀티플렉스</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop4-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop4-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop4 -->
+
+          <br>
+          <div class="shop" id="shop5">
+            <div class="shop-image">
+              <a onclick="shop5_clicked()" href="./shop5-detail.html"><img src="../image/shop/shop5_가챠샵.jpg" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop5_clicked()" href="./shop5-detail.html"><h3 id="title_name5">가챠샵</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop5-type">문구/팬시용품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop5-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop5-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop5 -->
+          <br>
+          <div class="shop" id="shop7">
+            <div class="shop-image">
+              <a onclick="shop7_clicked()" href="./shop7-detail.html"><img src="../image/shop/shop7_스플렌디노.jpg" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop7_clicked()" href="./shop7-detail.html"><h3 id="title_name7">스플렌디노</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop7-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop7-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop7-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop7 -->
+
+          <br>
+          <div class="shop" id="shop8">
+            <div class="shop-image">
+              <a onclick="shop8_clicked()" href="./shop8-detail.html"><img src="../image/shop/shop8_룩옵티컬.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop8_clicked()" href="./shop8-detail.html"><h3 id="title_name8">룩옵티컬</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop8-type">안경원</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop8_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop8-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop8-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop8 -->
+
+          <br>
+          <div class="shop" id="shop9">
+            <div class="shop-image">
+              <a onclick="shop9_clicked()" href="./shop9-detail.html"><img src="../image/shop/shop9_유니클로.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop9_clicked()" href="./shop9-detail.html"><h3 id="title_name9">유니클로</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop9-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop9-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop9-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop9 -->
+
+          <br>
+          <div class="shop" id="shop10">
+            <div class="shop-image">
+              <aonclick="shop10_clicked()"  href="./shop10-detail.html"><img src="../image/shop/shop10_프리스비.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop10_clicked()" href="./shop10-detail.html"><h3 id="title_name10">프리스비</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop10-type">컴퓨터</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop10_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop10-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop10-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop10 -->
+
+          <br>
+          <div class="shop" id="shop11">
+            <div class="shop-image">
+              <a onclick="shop11_clicked()" href="./shop11-detail.html"><img src="../image/shop/shop11_알파문구.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop11_clicked()" href="./shop11-detail.html"><h3 id="title_name11">알파문구</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop11-type">문구/팬시용품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop11-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop11-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop11 -->
+
+          <br>
+          <div class="shop" id="shop12">
+            <div class="shop-image">
+              <a onclick="shop12_clicked()" href="./shop12-detail.html"><img src="../image/shop/shop12_HK테일러.jpg" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a onclick="shop12_clicked()" href="./shop12-detail.html"><h3 id="title_name12">HK테일러</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop12-type">종합패션</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop12_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop12-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop12-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- shop12 -->
+
+          <br>
+
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2017. LaneLevine all right reserved.</p>
+    </footer>
+    <script type="text/javascript" src="../js/shop.js"></script>
+    <script type="text/javascript">
+      document.getElementById("shop1_view").innerHTML = localStorage.shop1_view;
+      document.getElementById("shop1-gpa").innerHTML = localStorage.shop1_gpa;
+      document.getElementById("shop2_view").innerHTML = localStorage.shop2_view;
+      document.getElementById("shop3_view").innerHTML = localStorage.shop3_view;
+      document.getElementById("shop4_view").innerHTML = localStorage.shop4_view;
+      document.getElementById("shop5_view").innerHTML = localStorage.shop5_view;
+      document.getElementById("shop7_view").innerHTML = localStorage.shop7_view;
+      document.getElementById("shop8_view").innerHTML = localStorage.shop8_view;
+      document.getElementById("shop9_view").innerHTML = localStorage.shop9_view;
+      document.getElementById("shop10_view").innerHTML = localStorage.shop10_view;
+      document.getElementById("shop11_view").innerHTML = localStorage.shop11_view;
+      document.getElementById("shop12_view").innerHTML = localStorage.shop12_view;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="beauty"></title>
+    <link rel="stylesheet" href="../css/beauty1-detail.css">
+    <!-- 라이트박스에 필요한 css/js (아래 3줄) -->
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../js/jquery.colorbox.js"></script>
+    <link rel="stylesheet" href="../css/colorbox.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['케이트 시크린 스킨 메이커 제로(리퀴드)세트', 22400]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+
+      $(document).ready(function(){
+
+        //추천버튼 라이트박스 적용
+        $('a#colorbox').colorbox({
+          inline : true,
+          width : 300
+        }).click(function(){
+          localStorage.setItem("id_number", Number($('div.beauty').attr('value')));
+          localStorage.setItem("gpa_category", $('div.beauty').attr('class'));
+        });
+      }); //jQuery 종료
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./beauty.html">beauty/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="beauty" id="beauty1" value="1">
+            <div class="beauty-image">
+              <a href="./beauty-detail.html"><img src="../image/beauty/beauty1_올리브영.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a href="./beauty-detail.html"><h3>올리브영</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty1-type">드럭스토어</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty1-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="beauty1-gpa">0.0</span>
+              </div>
+              <div class="beauty-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-498-5250')"><img src="../image/beauty/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="https://www.google.co.kr/maps/place/37%C2%B032'34.3%22N+127%C2%B004'18.1%22E/@37.542865,127.0695093,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.542865!4d127.071698"><img src="../image/beauty/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a id="colorbox" href="#dialog"><img src="../image/beauty/star.png" alt="" width="50px" /></a><p>추천</p></li>
+
+                  <!-- 다이얼로그 -->
+                  <div id="dialogs" style="display:none";>
+                    <div id="dialog">
+                      <iframe src="./gpa.html" width="230" height="100"></iframe>
+                    </div>
+                  </div>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- beauty1 -->
+          <div class="explanation">
+            <p>#1999년에 첫 번째 올리브영이 오픈한 이후 대한민국에 새로운 스토어 뉴욕을 형성해 나가고 있으며, 좋은 상품과 믿을 만한 서비스를 소비자에게 제공하기 위해 노력하고 있습니다.</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울특별시 광진구 화양동 3-34</p>
+                <p>*&nbsp;영업시간: 11:00 ~ 22:30 공휴일 23시 30분까지</p>
+                <p>*&nbsp;전화번호: 02-464-6273</p>
+                <p>*&nbsp;휴무일: X</p>
+                <p>*&nbsp;주차시설: O</p>
+                <p>*&nbsp;인근지하철: 7호선 건대입구, 2호선 건대입구, 7호선 어린이대공원</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat : 37.542865, lng : 127.071698},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="beauty-review-001">
+                <div class="people-photo">
+                  <img src="../image/beauty/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/operapin_/220991542041"><p>건대 혼밥 하기 좋은 라멘집 이놈의면빨:3</p></a>
+                  <p class="review-text">이놈의면빨 홍보대사 정원언니가 데리고간 건대 혼밥하기 좋은 이놈의면빨!! 이놈의면빨은 일본라멘을 저렴한 가격으로! 분위기있게 포차에서 먹을 수 있다~:) 항상 지나갈 때마다 궁금했지만 가보진 못했는데, 저번에 기회가 되서 정원언니와 개니니와 함께 먹으러 갔다~! 올리브영 건대점...</p>
+                </div>
+              </div><!-- beauty-review-001 -->
+              <div class="review-contents" id="beauty-review-002">
+                <div class="people-photo">
+                  <img src="../image/beauty/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/jhl5363/220944593178"><p>현애경타로 천막ver 훅2</p></a>
+                  <p class="review-text">친구가 하도 유명하대서, 정말 잠깐 짬을 내어 찾아간 현애경 타로 그중에서 수제자라는 천막타로로 슝. 간단한 가격은 5000원/커플 만원 가격이 생각보다 저렴쓰! 올리브영 건대점 서울특별시 광진구 능동로 133 전화 상세보기 이 현애경타로 천막은 올리브영 맞은편에 있는 곳이 맞아요 ㅎㅎ 딱...</p>
+                </div>
+              </div><!-- beauty-review-002 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>케이트 시크린 스킨 메이커 제로(리퀴드)세트</strong>     22,400 원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <ul>
+                  <li><strong>NULL</strong></li>
+                </ul>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('02-498-5250')"><img src="../image/beauty/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/beauty1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("beauty1_view").innerHTML = localStorage.beauty1_view;
+      document.getElementById("beauty1-gpa").innerHTML = localStorage.beauty1_gpa;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

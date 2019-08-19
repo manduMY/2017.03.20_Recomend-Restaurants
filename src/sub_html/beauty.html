@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>뷰티페이지</title>
+    <link rel="stylesheet" href="../css/beauty.css">
+    <link rel="stylesheet" href="../css/sale.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+        <article class="traverse-bar">
+          <div class="pull-left">
+            <ul class="category">
+              <li><input id="all" type="radio" name="nav_group" value="all" /><label for="all">전체</label></li>
+              <li><input id="cosmetics" type="radio" name="nav_group" value="cosmetics" /><label for="cosmetics">화장품</label></li>
+              <li><input id="healthclub" type="radio" name="nav_group" value="healthclub" /><label for="healthclub">헬스장</label></li>
+              <li><input id="massage" type="radio" name="nav_group" value="massage" /><label for="massage">마사지</label></li>
+              <li><input id="PS" type="radio" name="nav_group" value="PS" /><label for="PS">성형외과</label></li>
+              <li><input id="hair" type="radio" name="nav_group" value="hair" /><label for="hair">미용실</label></li>
+            </ul>
+          </div>
+          <div class="pull-right">
+            <div class="search-bar">
+              <form>
+                <input type="text" class="input_search" />
+                <button type="button" class="input-search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </article>
+      <div class="sale-info">
+        <ul class="sale-list">
+          <a href="http://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000100060024"><li><img src="../image/bell.png" width="20" alt="" /> <span>금, 토, 일 3일 깜짝할인! 최대50%+쿠폰 #망설이면 품절!</span></li></a>
+        </ul>
+      </div>
+      <section>
+        <div class="contents-wrapper">
+          <div class="beauty" id="beauty1">
+            <div class="beauty-image">
+              <a onclick="beauty1_clicked()" href="./beauty1-detail.html"><img src="../image/beauty/beauty1_올리브영.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty1_clicked()" href="./beauty1-detail.html"><h3 id="title_name1">올리브영</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty1-type">화장품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty1-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="beauty1-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty1 -->
+          <br>
+          <div class="beauty" id="beauty2">
+            <div class="beauty-image">
+              <a onclick="beauty2_clicked()" href="./beauty2-detail.html"><img src="../image/beauty/beauty2_the foot shop.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty2_clicked()" href="./beauty2-detail.html"><h3 id="title_name2">The Foot Shop</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty2-type">마사지</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty2_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty2-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty2 -->
+
+          <br>
+          <div class="beauty" id="beauty3">
+            <div class="beauty-image">
+              <a onclick="beauty3_clicked()" href="./beauty3-detail.html"><img src="../image/beauty/beauty3_시암타이.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty3_clicked()" href="./beauty2-detail.html"><h3 id="title_name3">시암타이</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty3-type">마사지</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty3_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty3-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty3-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty3 -->
+
+          <br>
+          <div class="beauty" id="beauty4">
+            <div class="beauty-image">
+              <a onclick="beauty4_clicked()" href="./beauty4-detail.html"><img src="../image/beauty/beauty4_태국왓포마사지.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty4_clicked()" href="./beauty4-detail.html"><h3 id="title_name4">태국왓포 마사지</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty4-type">마사지</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty4-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty4-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty4 -->
+
+          <br>
+          <div class="beauty" id="beauty5">
+            <div class="beauty-image">
+              <a onclick="beauty5_clicked()" href="./beauty5-detail.html"><img src="../image/beauty/beauty5_퀸스성형외과.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty5_clicked()" href="./beauty5-detail.html"><h3 id="title_name5">퀸스 성형외과</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty5-type">성형외과</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty5-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty5-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty5 -->
+
+          <br>
+          <div class="beauty" id="beauty6">
+            <div class="beauty-image">
+              <a onclick="beauty6_clicked()" href="./beauty6-detail.html"><img src="../image/beauty/beauty6_휘트니스베이.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty6_clicked()" href="./beauty6-detail.html"><h3 id="title_name6">휘트니스베이</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty6-type">헬스장</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty6-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty6-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty6 -->
+
+          <br>
+          <div class="beauty" id="beauty7">
+            <div class="beauty-image">
+              <a onclick="beauty7_clicked()" href="./beauty7-detail.html"><img src="../image/beauty/beauty7_에뛰드하우스.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty7_clicked()" href="./beauty7-detail.html"><h3 id="title_name7">에뛰드하우스</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty7-type">화장품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty7-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty7-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty7 -->
+
+          <br>
+          <div class="beauty" id="beauty8">
+            <div class="beauty-image">
+              <a onclick="beauty8_clicked()" href="./beauty8-detail.html"><img src="../image/beauty/beauty8_아리따움.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty8_clicked()" href="./beauty8-detail.html"><h3 id="title_name8">아리따움</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty8-type">화장품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty8_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty8-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty8-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty8 -->
+
+          <br>
+          <div class="beauty" id="beauty9">
+            <div class="beauty-image">
+              <a onclick="beauty9_clicked()" href="./beauty9-detail.html"><img src="../image/beauty/beauty9_이니스프리.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty9_clicked()" href="./beauty9-detail.html"><h3 id="title_name9">이니스프리</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty9-type">화장품</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty9-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty9-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty9 -->
+
+          <br>
+          <div class="beauty" id="beauty10">
+            <div class="beauty-image">
+              <a onclick="beauty10_clicked()" href="./beauty10-detail.html"><img src="../image/beauty/beauty10_고고헤어.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty10_clicked()" href="./beauty10-detail.html"><h3 id="title_name10">고고헤어</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty10-type">미용실</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty10_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty10-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty10-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty10 -->
+
+          <br>
+          <div class="beauty" id="beauty11">
+            <div class="beauty-image">
+              <a onclick="beauty11_clicked()" href="./beauty11-detail.html"><img src="../image/beauty/beauty11_라운지헤어.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty11_clicked()" href="./beauty11-detail.html"><h3 id="title_name11">라운지헤어</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty11-type">미용실</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty11-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty11-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty11 -->
+
+          <br>
+          <div class="beauty" id="beauty12">
+            <div class="beauty-image">
+              <a onclick="beauty12_clicked()" href="./beauty12-detail.html"><img src="../image/beauty/beauty12_제이피트휘트니스클럽.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="beauty-contents">
+              <div class="beauty-title">
+                <a onclick="beauty12_clicked()" href="./beauty12-detail.html"><h3 id="title_name12">제이피트 휘트니스 클럽</h3></a>
+              </div>
+              <div class="beauty-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="beauty12-type">헬스장</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="beauty12_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="beauty12-review">2</span></p>
+              </div>
+              <div class="beauty-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="beauty12-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- beauty12 -->
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2017. LaneLevine all right reserved.</p>
+    </footer>
+    <script type="text/javascript" src="../js/beauty.js"></script>
+    <script type="text/javascript">
+      document.getElementById("beauty1_view").innerHTML = localStorage.beauty1_view;
+      document.getElementById("beauty1-gpa").innerHTML = localStorage.beauty1_gpa;
+      document.getElementById("beauty2_view").innerHTML = localStorage.beauty2_view;
+      document.getElementById("beauty3_view").innerHTML = localStorage.beauty3_view;
+      document.getElementById("beauty4_view").innerHTML = localStorage.beauty4_view;
+      document.getElementById("beauty5_view").innerHTML = localStorage.beauty5_view;
+      document.getElementById("beauty6_view").innerHTML = localStorage.beauty6_view;
+      document.getElementById("beauty7_view").innerHTML = localStorage.beauty7_view;
+      document.getElementById("beauty8_view").innerHTML = localStorage.beauty8_view;
+      document.getElementById("beauty9_view").innerHTML = localStorage.beauty9_view;
+      document.getElementById("beauty10_view").innerHTML = localStorage.beauty10_view;
+      document.getElementById("beauty11_view").innerHTML = localStorage.beauty11_view;
+      document.getElementById("beauty12_view").innerHTML = localStorage.beauty12_view;
+    </script>
+  </body>
+</html>

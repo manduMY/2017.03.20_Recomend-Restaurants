@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>쇼핑페이지</title>
+    <link rel="stylesheet" href="../css/play.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+        <article class="traverse-bar">
+          <div class="pull-left">
+            <ul class="category">
+              <li><input id="all" type="radio" name="nav_group" value="all" /><label for="all">전체</label></li>
+              <li><input id="jewel" type="radio" name="nav_group" value="jewel" /><label for="jewel">귀금속</label></li>
+              <li><input id="acade" type="radio" name="nav_group" value="acade" /><label for="acade">오락실/멀티방</label></li>
+              <li><input id="movie" type="radio" name="nav_group" value="movie" /><label for="movie">영화관</label></li>
+            </ul>
+          </div>
+          <div class="pull-right">
+            <div class="search-bar">
+              <form>
+                <input type="text" class="input_search" />
+                <button type="button" class="input-search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </article>
+      <section>
+        <div class="contents-wrapper">
+          <br>
+
+          <div class="play" id="play1">
+            <div class="play-image">
+              <a onclick="play1_clicked()" href="./play1-detail.html"><img src="../image/play/play1_반지더하기.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play1_clicked()" href="./play1-detail.html"><h3 id="title_name1">반지더하기</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play1-type">귀금속,장신용품제조</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play1-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play1-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play1 -->
+
+          <br>
+          <div class="play" id="play2">
+            <div class="play-image">
+              <a onclick="play2_clicked()" href="./play2-detail.html"><img src="../image/play/play2_짱오락실.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play2_clicked()" href="./play2-detail.html"><h3 id="title_name2">짱오락실</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play2-type">오락실</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play2_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play2-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play2 -->
+
+          <br>
+          <div class="play" id="play3">
+            <div class="play-image">
+              <a onclick="play3_clicked()" href="./play3-detail.html"><img src="../image/play/play3_스트라이크팡.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play3_clicked()" href="./play3-detail.html"><h3 id="title_name3">스트라이크팡</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play3-type">야구사격</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play3_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play3-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play3-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play3 -->
+
+          <br>
+          <div class="play" id="play4">
+            <div class="play-image">
+              <a onclick="play4_clicked()" href="./play4-detail.html"><img src="../image/play/play4_THE BOX.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play4_clicked()" href="./play4-detail.html"><h3 id="title_name4">THE BOX</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play4-type">탈출카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play4-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play4-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play4 -->
+
+          <br>
+          <div class="play" id="play5">
+            <div class="play-image">
+              <a onclick="play5_clicked()" href="./play5-detail.html"><img src="../image/play/play5_고양이 다락방.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play5_clicked()" href="./play5-detail.html"><h3 id="title_name5">고양이 다락방</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play5-type">고양이 카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play5-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play5-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play5 -->
+
+          <br>
+          <div class="play" id="play6">
+            <div class="play-image">
+              <a onclick="play6_clicked()" href="./play6-detail.html"><img src="../image/play/play6_카페 데코믹스.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play6_clicked()" href="./play6-detail.html"><h3 id="title_name6">카페 데코믹스</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play6-type">고양이 카페,만화방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play6-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play6-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play6 -->
+
+          <br>
+          <div class="play" id="play7">
+            <div class="play-image">
+              <a onclick="play7_clicked()" href="./play7-detail.html"><img src="../image/play/play7_악쓰는하마.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play7_clicked()" href="./play7-detail.html"><h3 id="title_name7">악쓰는하마</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play7-type">노래방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play7-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play7-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play7 -->
+
+          <br>
+          <div class="play" id="play8">
+            <div class="play-image">
+              <a onclick="play8_clicked()" href="./play8-detail.html"><img src="../image/play/play8_스마일 멀티카페.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play8_clicked()" href="./play8-detail.html"><h3 id="title_name8">스마일 멀티카페</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play8-type">멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play8_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play8-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play8-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play8 -->
+
+          <br>
+          <div class="play" id="play9">
+            <div class="play-image">
+              <a onclick="play9_clicked()" href="./play9-detail.html"><img src="../image/play/play9_PLAYONE.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play9_clicked()" href="./play9-detail.html"><h3 id="title_name9">PLAYONE</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play9-type">레포츠시설</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play9-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play9-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play9 -->
+
+          <br>
+          <div class="play" id="play10">
+            <div class="play-image">
+              <a onclick="play10_clicked()" href="./play10-detail.html"><img src="../image/play/play10_메이즈 이스케이프.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play10_clicked()" href="./play10-detail.html"><h3 id="title_name10">메이즈 이스케이프</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play10-type">테마카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play10_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play10-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play10-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play10 -->
+
+          <br>
+          <div class="play" id="play11">
+            <div class="play-image">
+              <a onclick="play11_clicked()" href="./play11-detail.html"><img src="../image/play/play11_히어로 보드게임카페.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play11_clicked()" href="./play11-detail.html"><h3 id="title_name11">히어로 보드게임카페</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play11-type">보드카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play11-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play11-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play11 -->
+
+          <br>
+          <div class="play" id="play12">
+            <div class="play-image">
+              <a onclick="play12_clicked()" href="./play12-detail.html"><img src="../image/play/play12_키랩보드게임.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play12_clicked()" href="./play12-detail.html"><h3 id="title_name12">키랩보드게임</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play12-type">보드카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play12_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play12-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play12-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play12 -->
+
+          <br>
+          <div class="play" id="play13">
+            <div class="play-image">
+              <a onclick="play13_clicked()" href="./play13-detail.html"><img src="../image/play/play13_2구역 멀티방.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play13_clicked()" href="./play13-detail.html"><h3 id="title_name13">2구역 멀티방</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play13-type">멀티방</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play13_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play13-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play13-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play13 -->
+
+          <br>
+          <div class="play" id="play14">
+            <div class="play-image">
+              <a onclick="play14_clicked()" href="./play14-detail.html"><img src="../image/play/play14_한아름 볼링장.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play14_clicked()" href="./play14-detail.html"><h3 id="title_name14">한아름 볼링장</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play14-type">볼링장</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play14_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play14-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play14-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play14 -->
+
+          <br>
+          <div class="play" id="play15">
+            <div class="play-image">
+              <a onclick="play15_clicked()" href="./play15-detail.html"><img src="../image/play/play15_CGV.png" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="play-contents">
+              <div class="play-title">
+                <a onclick="play15_clicked()" href="./play15-detail.html"><h3 id="title_name15">CGV</h3></a>
+              </div>
+              <div class="play-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="play15-type">영화관</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="play15_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="play15-review">2</span></p>
+              </div>
+              <div class="play-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="play15-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- play15 -->
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2017. LaneLevine all right reserved.</p>
+    </footer>
+    <script type="text/javascript" src="../js/play.js"></script>
+    <script type="text/javascript">
+      document.getElementById("play1_view").innerHTML = localStorage.play1_view;
+      document.getElementById("play1-gpa").innerHTML = localStorage.play1_gpa;
+      document.getElementById("play2_view").innerHTML = localStorage.play2_view;
+      document.getElementById("play3_view").innerHTML = localStorage.play3_view;
+      document.getElementById("play4_view").innerHTML = localStorage.play4_view;
+      document.getElementById("play5_view").innerHTML = localStorage.play5_view;
+      document.getElementById("play6_view").innerHTML = localStorage.play6_view;
+      document.getElementById("play7_view").innerHTML = localStorage.play7_view;
+      document.getElementById("play8_view").innerHTML = localStorage.play8_view;
+      document.getElementById("play9_view").innerHTML = localStorage.play9_view;
+      document.getElementById("play10_view").innerHTML = localStorage.play10_view;
+      document.getElementById("play11_view").innerHTML = localStorage.play11_view;
+      document.getElementById("play12_view").innerHTML = localStorage.play12_view;
+      document.getElementById("play13_view").innerHTML = localStorage.play13_view;
+      document.getElementById("play14_view").innerHTML = localStorage.play14_view;
+      document.getElementById("play15_view").innerHTML = localStorage.play15_view;
+    </script>
+  </body>
+</html>

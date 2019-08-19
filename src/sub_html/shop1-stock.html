@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="shop"></title>
+    <link rel="stylesheet" href="../css/shop1-stock.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="shop" id="shop1">
+            <div class="shop-image">
+              <a href="./shop-detail.html"><img src="../image/shop/shop1_KYONA.png" alt="" width="500px" height="200px" /></a>
+            </div>
+            <div class="shop-contents">
+              <div class="shop-title">
+                <a href="./shop-detail.html"><h3>KYONA</h3></a>
+              </div>
+              <div class="shop-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop1-type">남성의류</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop1-review">2</span></p>
+              </div>
+              <div class="shop-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop-gpa">0.0</span>
+              </div>
+              <div class="shop-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('010-4174-8861')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="./shop1-stock.html"><img src="../image/shop/magnifying-glasses.png" alt="" width="50px" /></a><p>재고조회</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- food1 -->
+		    </div>
+        <div class="stock-title">
+          <h3>재고조회</h3>
+        </div>
+        <table border="1px">
+        <thead><!-- 제품 넘버, 사이즈, 수량 -->
+        <tr class="row_1">
+          <td width="70px"><h4>옷넘버<h4></td>
+          <td><h4>옷 호수</h4></td>
+          <td width="70px"><h4>옷 수량</h4></td>
+        </tr>
+        </thead>
+          <tbody style="height="100px"; overflow:scroll"><!-- 세부 사항 -->
+            <tr>
+              <td class="number">001</td>
+              <td class="size">ops24-2</td>
+              <td class="suryang">NULL개</td>
+            </tr>
+          </tbody>
+      </table>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/shop1-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("shop1_view").innerHTML = localStorage.shop1_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

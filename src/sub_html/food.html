@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>음식페이지</title>
+    <link rel="stylesheet" href="../css/food.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+        <article class="traverse-bar">
+          <div class="pull-left">
+            <ul class="category">
+              <li><input id="all" type="radio" name="nav_group" value="all" /><label for="all">NULL</label></li>
+              <li><input id="korfood" type="radio" name="nav_group" value="korfood" /><label for="korfood">NULL</label></li>
+              <li><input id="jpnfood" type="radio" name="nav_group" value="jpnfood" /><label for="jpnfood">NULL</label></li>
+              <li><input id="chifood" type="radio" name="nav_group" value="chifood" /><label for="chifood">NULL</label></li>
+              <li><input id="westernfood" type="radio" name="nav_group" value="westernfood" /><label for="westernfood">NULL</label></li>
+              <li><input id="seafood" type="radio" name="nav_group" value="seafood" /><label for="seafood">NULL</label></li>
+              <li><input id="cafe" type="radio" name="nav_group" value="cafe" /><label for="cafe">NULL</label></li>
+            </ul>
+          </div>
+          <div class="pull-right">
+            <div class="search-bar">
+              <form>
+                <input type="text" class="input_search" />
+                <button type="button" name="button" class="input-search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </article>
+      <section>
+        <div class="contents-wrapper">
+          <br>
+          <div class="food" id="food1">
+            <div class="food-image">
+              <a onclick="food1_clicked()" href="./food1-detail.html"><img src="../image/food/food1_또래끼리.jpg" alt="" width="300px" height="150px" /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food1_clicked()" href="./food1-detail.html"><h3 id="title_name1">또래끼리</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food1-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food1_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food1_review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="food1-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food1 -->
+          <br>
+          <div class="food" id="food2">
+            <div class="food-image">
+              <a onclick = "food2_clicked()" href="./food2-detail.html"><img src="../image/food/food2_깍둑.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick = "food2_clicked()" href="./food2-detail.html"><h3 id="title_name2">깍뚝</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food2-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food2_view"></span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food2-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food2 -->
+
+          <br>
+          <div class="food" id="food3">
+            <div class="food-image">
+              <a onclick = "food3_clicked()" href="./food3-detail.html"><img src="../image/food/food3_뱃놈.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick = "food3_clicked()" href="./food3-detail.html"><h3 id="title_name3">뱃놈</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food3-type">해산물 요리</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food3_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food3-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food2-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food3 -->
+
+          <br>
+          <div class="food" id="food4">
+            <div class="food-image">
+              <a onclick="food4_clicked()" href="./food4-detail.html"><img src="../image/food/food4_빠오즈푸.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food4_clicked()" href="./food4-detail.html"><h3 id="title_name4">빠오즈푸</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food4-type">한정식/정통한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food4_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food4_review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food4-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food4 -->
+
+          <br>
+          <div class="food" id="food5">
+            <div class="food-image">
+              <a onclick="food5_clicked()" href="./food5-detail.html"><img src="../image/food/food5_세종원.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food5_clicked()" href="./food5-detail.html"><h3 id="title_name5">세종원</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food5-type">중식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food5_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food5_review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food5-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food5 -->
+
+          <br>
+          <div class="food" id="food6">
+            <div class="food-image">
+              <a onclick="food6_clicked()" href="./food6-detail.html"><img src="../image/food/food6_바나나토크.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food6_clicked()" href="./food6-detail.html"><h3 id="title_name6">바나나토크</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food6-type">양식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food6_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food6_review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food6-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food6 -->
+
+          <br>
+          <div class="food" id="food7">
+            <div class="food-image">
+              <a onclick="food7_clicked()" href="./food7-detail.html"><img src="../image/food/food7_모델라이저.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food7_clicked()" href="./food7-detail.html"><h3 id="title_name7">모델라이저</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food7-type">양식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food7_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food7-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food7-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food7 -->
+
+          <br>
+          <div class="food" id="food8">
+            <div class="food-image">
+              <a onclick="food8_clicked()" href="./food8-detail.html"><img src="../image/food/food8_벨롱에스프레소.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food8_clicked()" href="./food8-detail.html"><h3 id="title_name8">벨롱에스프레소</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food8-type">카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food8_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food8-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food8-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food8 -->
+
+          <br>
+          <div class="food" id="food9">
+            <div class="food-image">
+              <a onclick="food9_clicked()" href="./food9-detail.html"><img src="../image/food/food9_Tokyo420.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food9_clicked()" href="./food9-detail.html"><h3 id="title_name9">Tokyo420</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food9-type">일식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food9_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food9-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food9-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food9 -->
+
+          <br>
+          <div class="food" id="food10">
+            <div class="food-image">
+              <a onclick="food10_clicked()" href="./food10-detail.html"><img src="../image/food/food10_행복한그릇.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food10_clicked()" href="./food10-detail.html"><h3 id="title_name10">행복한그릇</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food10-type">일식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food10_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food10-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food10-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food10 -->
+
+          <br>
+          <div class="food" id="food11">
+            <div class="food-image">
+              <a onclick="food11_clicked()" href="./food11-detail.html"><img src="../image/food/food11_춘천골.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food11_clicked()" href="./food11-detail.html"><h3 id="title_name11">춘천골</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food11-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food11_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food11-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food11-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food11 -->
+
+          <br>
+          <div class="food" id="food12">
+            <div class="food-image">
+              <a onclick="food12_clicked()" href="./food12-detail.html"><img src="../image/food/food12_경성팥집옥루몽.png" alt=""  width="300px" height="150px"  /></a>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a onclick="food12_clicked()" href="./food12-detail.html"><h3 id="title_name12">경성팥집옥루몽</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food12-type">카페</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food12_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food12-review">2</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt=""  width="20px"  height="20px" />
+                <span id="food12-gpa">0.0</span>
+              </div>
+            </div>
+          </div><!-- food12 -->
+      </section>
+      <footer>
+        <p>Copyright 2017. LaneLevine all right reserved.</p>
+      </footer>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/food.js"></script>
+    <script type="text/javascript">
+      document.getElementById("food1_view").innerHTML = localStorage.food1_view;
+      document.getElementById("food1-gpa").innerHTML = localStorage.food1_gpa;
+      document.getElementById("food2_view").innerHTML = localStorage.food2_view;
+      document.getElementById("food3_view").innerHTML = localStorage.food3_view;
+      document.getElementById("food4_view").innerHTML = localStorage.food4_view;
+      document.getElementById("food5_view").innerHTML = localStorage.food5_view;
+      document.getElementById("food6_view").innerHTML = localStorage.food6_view;
+      document.getElementById("food7_view").innerHTML = localStorage.food7_view;
+      document.getElementById("food8_view").innerHTML = localStorage.food8_view;
+      document.getElementById("food9_view").innerHTML = localStorage.food9_view;
+      document.getElementById("food10_view").innerHTML = localStorage.food10_view;
+      document.getElementById("food11_view").innerHTML = localStorage.food11_view;
+      document.getElementById("food12_view").innerHTML = localStorage.food12_view;
+    </script>
+  </body>
+</html>

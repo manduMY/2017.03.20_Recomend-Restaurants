@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title class="food"></title>
+    <link rel="stylesheet" href="../css/food1-detail.css">
+    <style media="screen">
+      #map {
+        height: 200px;
+      }
+      html, body {
+        height: 100%;
+      }
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Menu', 'Price'],
+          ['제주식 숙성 목살(반근)',  12900],
+          ['제주식 숙성 삼겹살(반근)',  12900],
+          ['수원돼지갈비(1대)',  11000],
+          ['눈내린살치살(반근): 19,900원 (한근)',  19900],
+          ['계란찜', 3000],
+          ['된장찌개', 1000]
+        ]);
+
+        var options = {
+          title: '메뉴 가격 그래프',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+
+      $(document).ready(function(){
+        $('#food2_img1').hover(function(){
+          $('#image_window').attr("src", "../image/food/food2_깍둑.png");
+          $('#food2_img1').attr("width", "15px");
+        }, function(){
+          $('#image_window').attr("src", "../image/food/food2_깍둑.png");
+          $('#food2_img1').attr("width", "10px");
+        });
+        $('#food2_img2').hover(function(){
+          $('#image_window').attr("src", "../image/food/food2_깍둑2.png");
+          $('#food2_img2').attr("width", "15px");
+        }, function(){
+          $('#image_window').attr("src", "../image/food/food2_깍둑.png");
+          $('#food2_img2').attr("width", "10px");
+        });
+      });//jQuery 종료
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header><a href="../main-page.html"><img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/></a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav><!-- 카테고리 메뉴 들어갈 부분. -->
+        <ul class="category">
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./play.html">Play</a></li>
+          <li><a href="./inn.html">Inn/Motel/Hotel</a></li>
+          <li><a href="./beauty.html">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="food" id="food2">
+            <div class="food-image">
+              <a href="./food-detail.html"><img id="image_window" src="../image/food/food2_깍둑.png" alt="" width="500px" height="200px" /></a>
+              <ul>
+                <li><img id="food2_img1" onclick="alert('event1')" src="../image/dot.png" width="10px"></li>
+                <li><img id="food2_img2" onclick="alert('event2')" src="../image/dot.png" width="10px"></li>
+              </ul>
+            </div>
+            <div class="food-contents">
+              <div class="food-title">
+                <a href="./food-detail.html"><h3>깍뚝</h3></a>
+              </div>
+              <div class="food-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="food2-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="food2_view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="food2-review">3</span></p>
+              </div>
+              <div class="food-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="food2-gpa">0.0</span>
+              </div>
+              <div class="food-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('02-466-0106')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="#"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- food2 -->
+          <div class="explanation">
+            <p>#제주식 숙성 삼겹살이 맛있는 저렴한 어린이대공원 고기 집</p>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-wrapper-left">
+              <div class="detail-explanation">
+                <p>*&nbsp;주소: 서울 광진구 능동로 19길 48</p>
+                <p>*&nbsp;영업시간: 15:00 - 03:00</p>
+                <p>*&nbsp;전화번호: 02-466-0106</p>
+                <p>*&nbsp;휴무일: x</p>
+                <p>*&nbsp;주차시설: X</p>
+              </div>
+              <div id="map">
+                <!-- API 찾아보기 -->
+              </div>
+              <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.548149, lng: 127.074518},
+                    zoom: 19
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYTRMpjepJBUzpzF0lUY5GfhIU55Yck-A&callback=initMap" async defer></script>
+            </div>
+            <div class="store-review">
+              <div class="review-title">
+                <h2>후기</h2>
+              </div>
+              <hr>
+              <div class="review-contents" id="food-review-001">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-male.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://post.naver.com/viewer/postView.nhn?volumeNo=7618028&memberNo=16190584&vType=VERTICAL"><p>어린이대공원역 맛집 역시나 깍뚝♡</p></a>
+                  <p class="review-text">간만에 어르신들 만나서고기로 몸보신을 했다 ㅋㅋㅋㅋㅋ지난번에 가려다가 못간 깍뚝가서소갈비살 조지고옴 ^_^사실, 똥묻이랑 가려다가 실패하고선나 혼자 따로 다녀왔었는데 ㅋㅋㅋ그땐 삼겹살 먹고 소 먹은건이번이 처음이라는!! 벽에 붙어있던 메뉴판.트레...</p>
+                </div>
+              </div><!-- food-review-001 -->
+              <div class="review-contents" id="food-review-002">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/yoojjani/220826518556"><p>건대 고기집 저렴한데 맛까지 잡은 깍뚝</p></a>
+                  <p class="review-text">깍뚝 서울특별시 광진구 능동로19길 48 1층 전화 상세보기 건대 저렴한 고기집 깍뚝을 다녀왔습니다. :) 깍뚝은 건대 고기집이라고 설명을 붙였지만 어린이대공원역에서 더 가까워요. 후드에 가려서 안 보이지만 삼겹살...</p>
+                </div>
+              </div><!-- food-review-002 -->
+              <div class="review-contents" id="food-review-003">
+                <div class="people-photo">
+                  <img src="../image/food/people-photo-female.png" alt="" width="70px" />
+                </div>
+                <div class="people-long">
+                  <a href="http://blog.naver.com/hje_0529/220775720058"><p>[세종/건대]'깍뚝' 화양리 고기 맛집</p></a>
+                  <p class="review-text">어제는 오랜만에 학교에 갔습니당ㅎㅎ 프린트 할 것도 많고 친구도 만날 겸 나름 학정원에서 공부도 쪼금 하고;; 그러다가 저녁으로 선택한 곳은 깍뚝!!! 여긴 고기가 진짜 맛있어요 ㅎㅎ 기본 세팅~~ 인데 사진을 너무 못...</p>
+                </div>
+              </div><!-- food-review-003 -->
+            </div>
+          </div>
+		    </div>
+        <div class="info2-wrapper">
+          <div class="info2-subinfo">
+            <div class="info2-menu">
+              <div class="info2-menu-title, title">
+                <h2>메뉴</h2>
+              </div>
+              <hr>
+              <div class="info2-menu-content">
+                <ul>
+                  <li><strong>제주식 숙성 목살(반근)</strong> : 12,900원 (한근): 19,900원</li>
+                  <li><strong>제주식 숙성 삼겹살(반근)</strong> : 12.900원 (한근): 19,900원</li>
+                  <li><strong>수원돼지갈비(1대):</strong> : 11,000원</li>
+                  <li><strong>눈내린살치살(반근)</strong> : 19,900원 (한근): 35,000원</li>
+                  <li><strong>계란찜</strong> : 3,000원</li>
+                  <li><strong>된장찌개</strong> : 1,000원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info2-origin">
+              <div class="info2-origin-title, title">
+                <h2>원산지</h2>
+              </div>
+              <hr>
+              <div class="info2-origin-content">
+                <p>모든것이 국내산</p>
+              </div>
+            </div>
+            <div class="info2-parttime">
+              <div class="info2-parttime-title, title">
+                <h2>구인구직</h2>
+              </div>
+              <hr>
+              <div class="info2-parttime-content">
+                <p>홀서빙 : 00명</p>
+              </div>
+              <div class="info2-parttime-call">
+                <a onclick="alert('010-7336-9724')"><img src="../image/food/phone-call.png" alt="" width="50px" /><p>전화</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="info2-graph" id="curve_chart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <script src="../js/food2-detail.js"></script>
+    <script type="text/javascript">
+      document.getElementById("food2_view").innerHTML = localStorage.food2_view;
+    </script>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>

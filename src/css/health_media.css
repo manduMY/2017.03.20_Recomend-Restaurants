@@ -1,0 +1,26 @@
+.info3-wrapper {
+  margin-top: 30px;
+}
+.health-media-title {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+.health-media-wrapper {
+}
+.health-media {
+  overflow: hidden;
+}
+.media-play {
+  float: left;
+  width: 68%;
+}
+.media-name {
+  margin-top:20%;
+  width: 30%;
+  float: left;
+  position: relative;
+}
+
+.media-name > h2 {
+  text-align: center;
+}

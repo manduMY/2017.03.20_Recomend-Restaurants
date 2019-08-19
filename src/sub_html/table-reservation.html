@@ -1,0 +1,127 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+    <title>food_reservation</title>
+    <link rel="stylesheet" href="../css/table-reservation.css">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <a href="./food.html">
+          <img src="../image/header.png" alt="응답하라" width="199" height="80px"/><img src="../image/세종대.png" alt="세종대" height="80px"/>
+        </a>
+        <!-- 응답하라 세종대 들어갈 공간 -->
+      </header>
+      <hr>
+      <nav>
+        <ul class="category">
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Play</a></li>
+          <li><a href="#">Inn/Motel/Hotel</a></li>
+          <li><a href="#">Beauty</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <section>
+        <div class="contents-wrapper">
+          <div class="food-reserve" id="reserve">
+            <div class="food-reserve-image">
+              <img src="http://placehold.it/500x200">
+            </div>
+            <div class="food-reserve-contents">
+              <div class="food-reserve-title">
+                <h3>음식점 이름 들어갈 자리</h3>
+              </div>
+              <div class="food-reserve-contents-cont">
+                <p>종류&nbsp;&nbsp;&nbsp;<span id="shop-type">한식</span></p>
+                <br>
+                <p>조회수&nbsp;&nbsp;&nbsp;<span id="shop-view">0</span></p>
+                <p>리뷰&nbsp;&nbsp;&nbsp;<span id="shop-review">2</span></p>
+              </div>
+              <div class="food-reserve-contents-gpa">
+                <img src="../image/gpa.png" alt="" width="20px" height="20px"/>
+                <span id="shop-gpa">0.0</span>
+              </div>
+              <div class="food-reserve-contents-fnbutton">
+                <ul>
+                  <li><a onclick="alert('010-4174-8861')"><img src="../image/food/phone-call.png" alt="" width="50px" /></a><p>전화</p></li>
+                  <li><a href="#"><img src="../image/food/map.png" alt="" width="50px" /></a><p>지도</p></li>
+                  <li><a href="#"><img src="../image/food/star.png" alt="" width="50px" /></a><p>추천</p></li>
+                  <li><a href="#"><img src="../image/food/people-plus.png" alt="" width="50px" /></a><p>예약</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!--여기까지 상단-->
+
+
+        <!--여기부터 하단 테이블예약 페이지-->
+          <div class="reservation-page">
+            <div class="reservation">
+              <h2>예약하기</h2>
+            </div>
+            <div class="table-reserve">
+              <div class="people">
+                <div class="reserve-people">
+                  <h4>예약자 수&nbsp;:&nbsp;<span id="reserve-people">0</span></h4>
+                </div>
+                <div class="waiting-people">
+                  <h4>대기자 수&nbsp;:&nbsp;<span id="waiting-people">0</span></h4>
+                </div>
+              </div>
+              <div class="table-infor">
+                <ul>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number1"/>
+                    <label for="number1">1번 테이블 (10명)</label>
+                  </li>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number2"/>
+                    <label for="number2">2번 테이블 (4명)</label>
+                  </li>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number3"/>
+                    <label for="number3">3번 테이블 (4명)</label>
+                  </li>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number4"/>
+                    <label for="number4">4번 테이블 (4명)</label>
+                  </li>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number5"/>
+                    <label for="number5">5번 테이블 (4명)</label>
+                  </li>
+                  <li>
+                    <input class="table-number" type="checkbox" id="number6"/>
+                    <label for="number6">6번 테이블 (4명)</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="submit">
+                <input type="submit" value="예약완료"/>
+              </div>
+            </div>
+            <div class="table">
+              <div class="table-diagram">
+                <h3>테이블 구성도</h3>
+              </div>
+              <div class="table-image">
+                <img src="http://placehold.it/400x300"></a>
+                <!--테이블 사진 들어갈 자리-->
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+    <div class="fixed-bar">
+      <div class="top-button">
+        <a href="#"><span>△TOP</span></a>
+      </div>
+    </div>
+    <footer><p>Copyright 2017. LaneLevine all right reserved.</p></footer>
+  </body>
+</html>
