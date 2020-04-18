@@ -89,7 +89,7 @@ Play Around The School
 
 | 평점 기능 |
 |:----------------------------------------:|
-|<img src="markdown/img/rating_function.png" width=1000 />|
+|<img src="markdown/img/rating_function.png" width=500 />|
 
 <br/>
 
